@@ -1,7 +1,27 @@
-import React from 'react'
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import Home from './pages/Home';
+import SignIn from './pages/signin';
+import SignUp from './pages/signup';
+import About from './pages/About';
+import Profile from './pages/Profile';
+
 
 export default function  () {
   return (
-      <hi className="text-red-500">App</hi>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/sign-in' element={<SignIn/>}/>
+        <Route path='/sign-up' element={<SignUp/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/profile' element={<Profile/>}/>
+
+
+
+
+      </Routes>
+    
+    </BrowserRouter>
+    
   )
 }
