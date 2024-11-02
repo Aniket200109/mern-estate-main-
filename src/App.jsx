@@ -4,11 +4,13 @@ import SignIn from './pages/signin';
 import SignUp from './pages/signup';
 import About from './pages/About';
 import Profile from './pages/Profile';
+import Header from './components/Header';
 
 
 export default function  () {
   return (
     <BrowserRouter>
+      <Header/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/sign-in' element={<SignIn/>}/>
